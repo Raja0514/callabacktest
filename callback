@@ -1,0 +1,38 @@
+let pizza;
+function orderPizza(){
+   	setTimeout(function(){
+		console.log(`order placed to shop`);
+		pizza=`ready will come to u`;
+		console.log(`${pizza}`);
+	},2000)
+	
+}
+orderPizza();
+
+let pizza1;
+function orderpizza1(pizzataste,pizzataste1){
+		setTimeout(function(){
+		console.log(`This is before setimeout function`)
+		let work='done'
+	    pizzataste(work);
+	    console.log(`This is after setimeout function`)
+	},2000)
+	console.log(`hello world`);
+	setTimeout(function(){
+		console.log(`order placed to shop`);
+	    pizza1=`pizza ready will come to later`;
+	    //console.log(`${pizza1}`);
+		pizzataste1(pizza1);
+},2000)
+	console.log(`hello world 2`);
+}
+
+function pizzaready(work){
+		console.log(work);
+}
+
+function pizzaready1(pizza1){
+	console.log(pizza1);
+}
+
+orderpizza1(pizzaready,pizzaready1);
